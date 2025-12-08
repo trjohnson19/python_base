@@ -1,0 +1,21 @@
+{
+	// Python-specific
+	"[python]": {
+		"editor.defaultFormatter": "ms-python.black-formatter",
+	},
+	"python.useEnvironmentsExtension": true,
+
+	// Linting / formatting
+	"autoDocstring.docstringFormat": "google",
+	"autoDocstring.includeExtendedSummary": true,
+	"black-formatter.importStrategy": "fromEnvironment",
+	"editor.insertSpaces": false,
+	"editor.rulers": [
+		80, // Should be adhered to when practical. Also enforced by `black`.
+	],
+	"mypy-type-checker.importStrategy": "fromEnvironment",
+	"python.analysis.typeCheckingMode": "strict",
+
+	// Testing
+	"python.testing.pytestEnabled": true,
+}

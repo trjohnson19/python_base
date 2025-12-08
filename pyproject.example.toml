@@ -1,0 +1,46 @@
+[project]
+name = "python_base"
+version = "0.1.0"
+description = "`python_base`: a fully featured `uv` base repo for python development"
+readme = "README.md"
+authors = [
+	{ name = "trjohnson19", email = "77356759+trjohnson19@users.noreply.github.com" },
+]
+requires-python = ">=3.14"
+dependencies = [
+]
+
+[project.scripts]
+python_base = "python_base:main"
+
+[build-system]
+requires = ["uv_build>=0.9.16,<0.10.0"]
+build-backend = "uv_build"
+
+[dependency-groups]
+dev = [
+	"black>=25.11.0",
+	"mypy>=1.19.0",
+]
+test = [
+	"pytest>=9.0.2",
+	"pytest-cov>=7.0.0",
+]
+
+[tool.black]
+line-length = 80
+target-version = ["py314"]
+
+[tool.pytest]
+minversion = "9.0.2"
+required_plugins = [
+	"pytest-cov",
+]
+testpaths = [
+	"tests",
+]
+
+[tool.uv.workspace]
+members = [
+    "python_base",
+]
