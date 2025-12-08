@@ -22,7 +22,7 @@ This template makes a few key assumptions for how the user would like to manage 
 
 ## Using `uv`
 Full documentation for `uv` is available on the [documentation site](https://docs.astral.sh/uv).
-- To create a new app (assuming README.md exists):
+- To create a new app:
 ```bash
 uv init --directory . --name python_base
 ```
