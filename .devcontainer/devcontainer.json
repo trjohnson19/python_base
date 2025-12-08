@@ -26,11 +26,19 @@
 
 	// Use 'postCreateCommand' to run commands after the container is created.
 	// Enable postCreateCommand after running `uv init`.
-	// "postCreateCommand": {
-	// 	"uv": [
-	// 		"${containerWorkspaceFolder}/devcontainer-uv-setup.bash" //,
-	// 	] //,
-	// },
+	"postCreateCommand": {
+		// Note: The Microsoft python dev container automatically sources from
+		// ~/.bash_aliases if it exists, so no additional .bashrc configuration
+		// is needed.
+		"bash_aliases": [
+			"/usr/bin/cp",
+				"${containerWorkspaceFolder}/devcontainer.bash_aliases",
+				"/home/vscode/.bash_aliases" //,
+		] //,
+		// "uv": [
+		// 	"${containerWorkspaceFolder}/devcontainer-uv-setup.bash" //,
+		// ] //,
+	},
 
 	// Configure tool-specific properties.
 	"customizations": {
