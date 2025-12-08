@@ -25,7 +25,7 @@
 	// "forwardPorts": [],
 
 	// Use 'postCreateCommand' to run commands after the container is created.
-	// Enable postCreateCommand after running `uv init`.
+	// Enable postCreateCommand `uv` after running `uv init`.
 	"postCreateCommand": {
 		// Note: The Microsoft python dev container automatically sources from
 		// ~/.bash_aliases if it exists, so no additional .bashrc configuration
