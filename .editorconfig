@@ -10,6 +10,16 @@ end_of_line = lf
 insert_final_newline = true
 trim_trailing_whitespace = true
 
+[**.json]
+indent_style = tab
+
+[**.jsonc]
+indent_style = tab
+
+[**.md]
+indent_style = space
+indent_size = 4
+
 [**.yaml]
 indent_style = space
 indent_size = 2

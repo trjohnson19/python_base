@@ -2,62 +2,62 @@
 // see the README at:
 // https://github.com/devcontainers/templates/tree/main/src/python
 {
-  "name": "python_base",
-  // Or use a Dockerfile or Docker Compose file.
-  // More info: https://containers.dev/guide/dockerfile
-  "image": "mcr.microsoft.com/devcontainers/python:2-3.14-trixie",
-  // Features to add to the dev container.
-  // More info: https://containers.dev/features.
-  "features": {
-    "ghcr.io/devcontainers-extra/features/uv": {
-      "version": "0.9.16" //,
-    } //,
-  },
-  "containerEnv": {
-    "UV_LINK_MODE": "copy" //,
-  },
-  // Use 'forwardPorts' to make a list of ports inside the container available
-  // locally.
-  // "forwardPorts": [],
-  // Use 'postCreateCommand' to run commands after the container is created.
-  // Enable postCreateCommand `uv` after running `uv init`.
-  "postCreateCommand": {
-    // Note: The Microsoft python dev container automatically sources from
-    // ~/.bash_aliases if it exists, so no additional .bashrc configuration
-    // is needed.
-    "bash_aliases": [
-      "/usr/bin/cp",
-      "${containerWorkspaceFolder}/devcontainer.bash_aliases",
-      "/home/vscode/.bash_aliases" //,
-    ] //,
-    // "uv": [
-    // 	"${containerWorkspaceFolder}/devcontainer-uv-setup.bash" //,
-    // ] //,
-  },
-  // Configure tool-specific properties.
-  "customizations": {
-    "vscode": {
-      "extensions": [
-        // General,
-        "EditorConfig.EditorConfig",
-        "tamasfe.even-better-toml",
-        // Python
-        "charliermarsh.ruff",
-        "ms-python.debugpy",
-        "ms-python.mypy-type-checker",
-        "ms-python.python",
-        "ms-python.vscode-pylance",
-        "ms-python.vscode-python-envs",
-        "njpwerner.autodocstring",
-        // bash
-        //// v7.2.8 is currently broken, use v7.2.5 in the meantime
-        //// https://github.com/foxundermoon/vs-shell-format/issues/396
-        "foxundermoon.shell-format@7.2.5",
-        "timonwong.shellcheck" //,
-      ] //,
-    } //,
-  } //,
-  // Uncomment to connect as root instead.
-  // More info: https://aka.ms/dev-containers-non-root.
-  // "remoteUser": "root"
+	"name": "python_base",
+	// Or use a Dockerfile or Docker Compose file.
+	// More info: https://containers.dev/guide/dockerfile
+	"image": "mcr.microsoft.com/devcontainers/python:2-3.14-trixie",
+	// Features to add to the dev container.
+	// More info: https://containers.dev/features.
+	"features": {
+		"ghcr.io/devcontainers-extra/features/uv": {
+			"version": "0.9.16"
+		}
+	},
+	"containerEnv": {
+		"UV_LINK_MODE": "copy"
+	},
+	// Use 'forwardPorts' to make a list of ports inside the container available
+	// locally.
+	// "forwardPorts": [],
+	// Use 'postCreateCommand' to run commands after the container is created.
+	// Enable postCreateCommand `uv` after running `uv init`.
+	"postCreateCommand": {
+		// Note: The Microsoft python dev container automatically sources from
+		// ~/.bash_aliases if it exists, so no additional .bashrc configuration
+		// is needed.
+		"bash_aliases": [
+			"/usr/bin/cp",
+			"${containerWorkspaceFolder}/devcontainer.bash_aliases",
+			"/home/vscode/.bash_aliases"
+		] //,
+		// "uv": [
+		// 	"${containerWorkspaceFolder}/devcontainer-uv-setup.bash"
+		// ]
+	},
+	// Configure tool-specific properties.
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				// General,
+				"EditorConfig.EditorConfig",
+				"tamasfe.even-better-toml",
+				// Python
+				"charliermarsh.ruff",
+				"ms-python.debugpy",
+				"ms-python.mypy-type-checker",
+				"ms-python.python",
+				"ms-python.vscode-pylance",
+				"ms-python.vscode-python-envs",
+				"njpwerner.autodocstring",
+				// bash
+				//// v7.2.8 is currently broken, use v7.2.5 in the meantime
+				//// https://github.com/foxundermoon/vs-shell-format/issues/396
+				"foxundermoon.shell-format@7.2.5",
+				"timonwong.shellcheck"
+			]
+		}
+	}
+	// Uncomment to connect as root instead.
+	// More info: https://aka.ms/dev-containers-non-root.
+	// "remoteUser": "root"
 }
