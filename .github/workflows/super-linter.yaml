@@ -37,3 +37,5 @@ jobs:
         env:
           DEFAULT_BRANCH: "main"
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          # Linter enable / disable
+          VALIDATE_NATURAL_LANGUAGE: false
