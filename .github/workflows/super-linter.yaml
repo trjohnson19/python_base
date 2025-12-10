@@ -1,0 +1,39 @@
+---
+## This workflow executes several linters on changed files based on languages
+## used in your code base whenever you push a code or open a pull request.
+##
+## You can adjust the behavior by modifying this file.
+## For more information, see:
+## https://github.com/github/super-linter
+name: Lint Code Base
+
+permissions: {}
+
+on: # yamllint disable-line rule:truthy
+  push: null
+  pull_request: null
+
+jobs:
+  run-lint:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      packages: read
+      # To report GitHub Actions status checks
+      statuses: write
+    steps:
+      - name: Checkout code
+        # yamllint disable-line rule:line-length
+        uses: actions/checkout@8e8c483db84b4bee98b60c0593521ed34d9990e8 # @v6.0.1
+        with:
+          ## Full git history is needed to get a proper list of changed files
+          ## within `super-linter`
+          fetch-depth: 0
+          persist-credentials: false
+
+      - name: Lint Code Base
+        # yamllint disable-line rule:line-length
+        uses: super-linter/super-linter@2bdd90ed3262e023ac84bf8fe35dc480721fc1f2 # @v8.3.1
+        env:
+          DEFAULT_BRANCH: "main"
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

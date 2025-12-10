@@ -1,0 +1,20 @@
+[formatting]
+align_entries = false         # default = false
+align_comments = true         # default = true
+array_trailing_comma = true   # default = true
+array_auto_expand = true      # default = true
+array_auto_collapse = false   # default = true
+compact_arrays = true         # default = true
+compact_inline_tables = false # default = false
+inline_table_expand = true    # default = true
+compact_entries = false       # default = false
+column_width = 0              # default = 80
+indent_tables = false         # default = false
+indent_entries = false        # default = false
+indent_string = "	"           # default = "  "
+trailing_newline = true       # default = true
+reorder_keys = false          # default = false
+reorder_arrays = false        # default = false
+reorder_inline_tables = false # default = false
+allowed_blank_lines = 2       # default = 2
+crlf = false                  # default = false

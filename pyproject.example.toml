@@ -1,3 +1,4 @@
+#:schema https://raw.githubusercontent.com/SchemaStore/schemastore/master/src/schemas/json/pyproject.json
 [project]
 name = "python_base"
 version = "0.1.0"
@@ -7,29 +8,86 @@ authors = [
 	{ name = "trjohnson19", email = "77356759+trjohnson19@users.noreply.github.com" },
 ]
 requires-python = ">=3.14"
+keywords = [
+	"base",
+	"template",
+]
+license = "Unlicense"
+license-files = [
+	"LICENSE",
+]
+classifiers = [
+	"Development Status :: 4 - Beta",
+	"Intended Audience :: Developers",
+	"License :: OSI Approved",
+	"License :: OSI Approved :: The Unlicense (Unlicense)",
+	"Natural Language :: English",
+	"Operating System :: OS Independent",
+	"Programming Language :: Python",
+	"Programming Language :: Python :: 3",
+	"Programming Language :: Python :: 3 :: Only",
+	"Programming Language :: Python :: 3.14",
+	"Topic :: Software Development",
+	"Topic :: Utilities",
+]
+# dynamic = [
+# 	"version",
+# ]
 dependencies = [
 ]
 
 [project.scripts]
 python_base = "python_base:main"
 
+[project.urls]
+Documentation = "https://github.com/trjohnson19/python_base#readme"
+Repository = "https://github.com/trjohnson19/python_base"
+Tracker = "https://github.com/trjohnson19/python_base/issues"
+
 [build-system]
-requires = ["uv_build>=0.9.16,<0.10.0"]
+requires = [
+	"uv_build>=0.9.16,<0.10.0",
+]
 build-backend = "uv_build"
 
 [dependency-groups]
 dev = [
-	"black>=25.11.0",
+	"ruff>=0.14.8",
 	"mypy>=1.19.0",
+	"pre-commit>=4.5.0",
 ]
 test = [
 	"pytest>=9.0.2",
 	"pytest-cov>=7.0.0",
 ]
 
-[tool.black]
-line-length = 80
-target-version = ["py314"]
+[tool.uv.workspace]
+members = [
+	"python_base",
+]
+
+[tool.ruff]
+required-version = "0.14.8"
+
+[tool.ruff.format]
+line-ending = "lf" # Unix
+
+[tool.ruff.lint]
+extend-select = [
+	"A",   # flake8-builtins
+	"B",   # flake8-bugbear
+	"D",   # pydocstyle
+	"E",   # pycodestyle
+	"F",   # pyflakes
+	"N",   # pep8-naming
+	"I",   # isort
+	"Q",   # flake8-quotes
+	"SIM", # flake8-simplify
+	"UP",  # pyupgrade
+]
+
+[tool.ruff.lint.pydocstyle]
+convention = "google"
 
 [tool.pytest]
 minversion = "9.0.2"
@@ -37,10 +95,5 @@ required_plugins = [
 	"pytest-cov",
 ]
 testpaths = [
-	"tests",
-]
-
-[tool.uv.workspace]
-members = [
-    "python_base",
+	"test",
 ]

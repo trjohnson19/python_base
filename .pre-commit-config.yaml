@@ -1,0 +1,22 @@
+- repo: https://github.com/pre-commit/pre-commit-hooks
+  rev: v6.0.0  # Use the ref you want to point at
+  hooks:
+  - id: end-of-file-fixer
+  - id: mixed-line-ending --fix=lf
+  - id: no-commit-to-branch
+  - id: trailing-whitespace
+- repo: https://github.com/pre-commit/mirrors-mypy
+  rev: v1.19.0
+  hooks:
+  - id: mypy
+- repo: https://github.com/astral-sh/ruff-pre-commit
+  rev: v0.14.8
+  hooks:
+  # Run the linter.
+  - id: ruff-check
+  # Run the formatter.
+  - id: ruff-format
+- repo: https://github.com/shellcheck-py/shellcheck-py
+  rev: v0.11.0.1
+  hooks:
+  - id: shellcheck

@@ -44,8 +44,11 @@
 	"customizations": {
 		"vscode": {
 			"extensions": [
+				// General,
+				"EditorConfig.EditorConfig",
+				"tamasfe.even-better-toml",
 				// Python
-				"ms-python.black-formatter",
+				"charliermarsh.ruff",
 				"ms-python.debugpy",
 				"ms-python.mypy-type-checker",
 				"ms-python.python",
@@ -53,7 +56,9 @@
 				"ms-python.vscode-python-envs",
 				"njpwerner.autodocstring",
 				// bash
-				"foxundermoon.shell-format",
+				//// v7.2.8 is currently broken, use v7.2.5 in the meantime
+				//// https://github.com/foxundermoon/vs-shell-format/issues/396
+				"foxundermoon.shell-format@7.2.5",
 				"timonwong.shellcheck" //,
 			] //,
 		} //,
