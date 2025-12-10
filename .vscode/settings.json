@@ -1,7 +1,8 @@
+/* eslint-disable jsonc/no-comments -- settings.json can have comments */
 {
 	// Python-specific
 	"[python]": {
-		"editor.defaultFormatter": "ms-python.black-formatter"
+		"editor.defaultFormatter": "charliermarsh.ruff"
 	},
 	"python.useEnvironmentsExtension": true,
 	// Linting / formatting
