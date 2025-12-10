@@ -11,10 +11,12 @@ updates:
     directory: "/"
     schedule:
       interval: weekly
-    cooldown: "0d"
+    cooldown:
+      default-days: 1
 
   - package-ecosystem: "uv"
     directory: "/"
     schedule:
       interval: weekly
-    cooldown: "0d"
+    cooldown:
+      default-days: 1
