@@ -12,11 +12,11 @@ updates:
     schedule:
       interval: weekly
     cooldown:
-      default-days: 1
+      default-days: 5
 
   - package-ecosystem: "uv"
     directory: "/"
     schedule:
       interval: weekly
     cooldown:
-      default-days: 1
+      default-days: 5

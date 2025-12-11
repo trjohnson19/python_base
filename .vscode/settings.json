@@ -1,4 +1,3 @@
-/* eslint-disable jsonc/no-comments -- settings.json can have comments */
 {
 	// Python-specific
 	"[python]": {

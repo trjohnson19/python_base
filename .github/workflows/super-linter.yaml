@@ -38,4 +38,6 @@ jobs:
           DEFAULT_BRANCH: "main"
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           # Linter enable / disable
+          # JSON is too much of a pain with devcontainer.json and VS Code settings.json
+          VALIDATE_JSON: false
           VALIDATE_NATURAL_LANGUAGE: false
