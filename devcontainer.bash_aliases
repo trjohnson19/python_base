@@ -1,2 +1,3 @@
-#!/usr/bin/env bash
+#!/usr/bin/false
+# shellcheck shell=bash
 alias 'll'='ls -lah'

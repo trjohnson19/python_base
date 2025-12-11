@@ -1,21 +1,22 @@
 {
 	// Python-specific
 	"[python]": {
-		"editor.defaultFormatter": "ms-python.black-formatter",
+		"editor.defaultFormatter": "charliermarsh.ruff"
 	},
 	"python.useEnvironmentsExtension": true,
-
 	// Linting / formatting
+	//// Python
 	"autoDocstring.docstringFormat": "google",
 	"autoDocstring.includeExtendedSummary": true,
-	"black-formatter.importStrategy": "fromEnvironment",
-	"editor.insertSpaces": false,
 	"editor.rulers": [
-		80, // Should be adhered to when practical. Also enforced by `black`.
+		88 // Should be adhered to when practical. Also enforced by `ruff`.
 	],
 	"mypy-type-checker.importStrategy": "fromEnvironment",
 	"python.analysis.typeCheckingMode": "strict",
-
+	"ruff.format.backend": "uv",
+	"ruff.importStrategy": "fromEnvironment",
+	//// Others
+	"shellformat.useEditorConfig": true,
 	// Testing
-	"python.testing.pytestEnabled": true,
+	"python.testing.pytestEnabled": true
 }
